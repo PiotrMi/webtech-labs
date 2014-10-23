@@ -1,0 +1,21 @@
+{
+  "name": "assignment02",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sabov/webtech-labs",
+  "authors": [
+    "Oleksandr Sabov <alexsabov@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0",
+    "mapbox.js": "~2.1.3"
+  }
+}
