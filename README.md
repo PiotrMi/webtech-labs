@@ -3,9 +3,9 @@ WebTech Labs
 
 RWTH Aachen University - Web Technologies labs WS1415
 
-### Installation
+# Installation
 
-# Tools
+### Tools
 
 **Install nodeJS**
 
@@ -27,7 +27,7 @@ Ubuntu:
 
     npm install -g bower
 
-# Project
+### Project
 
 Clone repository
 
