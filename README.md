@@ -13,10 +13,6 @@ Ubuntu:
 
     sudo apt-get install -y nodejs
 
-Mac Os:
-
-    brew install node
-
 **Install Node package manager**
 
 Ubuntu:
