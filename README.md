@@ -28,7 +28,7 @@ Ubuntu:
 Clone repository:
 
     git clone git@github.com:sabov/webtech-labs.git
-    cd webtech-labs
+    cd webtech-labs/assignment02/
     bower install
 
 **Note.** To open a project you need to configure Apache2 web server or any other Web Server.
