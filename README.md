@@ -29,7 +29,7 @@ Ubuntu:
 
 ### Project
 
-Clone repository
+Clone repository:
 
     git clone git@github.com:sabov/webtech-labs.git
     cd webtech-labs
