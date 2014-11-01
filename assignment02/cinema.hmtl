@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8' />
+</head>
+<body>
+    <canvas id='myCanvas'>Обновите браузер</canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas"),
+        ctx     = canvas.getContext('2d');
+        var sit = {};
+        canvas.width  = 640;
+        canvas.height = 480;
+
+
+        function renderSits(canvas, mouseX, mouseY){
+            ctx = canvas.getContext('2d');
+            sit.size = 34;
+            sit.distance = 40;
+            sit.startX = 30;
+            sit.startY = 70;
+
+            //sits
+            for (i = 0; i < 8; i += 1)
+                for (j = 0; j < 8; j += 1) {
+                    if ((mouseX > (sit.startX + i * sit.distance)) && 
+                        (mouseX < (sit.startX + i * sit.distance + sit.size)) && 
+                        (mouseY > (sit.startY + j * sit.distance)) && 
+                        (mouseY < (sit.startY + j * sit.distance + sit.size)))
+                        ctx.fillStyle = 'yellow';
+                    else
+                        ctx.fillStyle = '#'+j+'5'+j+j+'AA';
+                    ctx.strokeStyle = 'gray';
+                    ctx.strokeRect(sit.startX + i * sit.distance, sit.startY + j * sit.distance, sit.size, sit.size);
+                    ctx.fillRect(sit.startX + i * sit.distance, sit.startY + j * sit.distance, sit.size, sit.size);
+                    ctx.fillStyle = 'black';
+                    ctx.fillText(i, 43 + i * 40, 91 + j * 40);
+                }
+
+        };
+
+        function getMousePos(canvas, evt) {
+            var rect = canvas.getBoundingClientRect();
+            return {
+                x: evt.clientX - rect.left,
+                y: evt.clientY - rect.top
+            };
+        };
+
+        canvas.addEventListener('mousemove', function(evt) {
+            var mousePos = getMousePos(canvas, evt);
+            var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+            renderSits(canvas, mousePos.x, mousePos.y);        
+        }, false);
+        
+        renderSits(canvas, 0, 0);        
+        //screen
+        ctx.beginPath();
+        ctx.moveTo(50,20);
+        ctx.quadraticCurveTo(180,5,320,20);    
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = '#990033';
+        ctx.stroke();
+    </script>
+    </body>
+</html>
