@@ -7,40 +7,5 @@
 </head>
 <body>
 
-<form class="checkout">
-    <div class="checkout-header">
-        <div class="checkout-title">
-            Checkout
-            <span class="checkout-price">$0.00</span>
-        </div>
-    </div>
-    <p>
-        <!--Card holder name-->
-        <input name="card-user" type="text" class="checkout-input checkout-name" autofocus maxlength="60"
-               placeholder="Card holder name" required title="Enter holder name as it is printed on the card.">
-        <!--Expiration Fields-->
-        <input type="text" size="2" class="checkout-input checkout-exp" pattern="[0-9]{2}"
-               title="Expiration Month (2 Digit Month)" placeholder="MM" required/>
-        <input type="text" size="2" class="checkout-input checkout-exp" pattern="[0-9]{2}"
-               title="Expiration Year (2 Digit Year)" placeholder="YY" required/>
-    </p>
-
-    <p>
-        <!--Credit Card Field-->
-        <input class="checkout-input checkout-card" placeholder="●●●● ●●●● ●●●● ●●●●" required type="text" size="20"
-               pattern="[0-9]{13,16}"
-               title="Credit Card (13 to 16 digits, no spaces no dashes)"
-               value="" autocomplete="off"/>
-        <!--CVC Field-->
-        <input class="checkout-input checkout-cvc" placeholder="CVC" size="4" required type="text" pattern="[0-9]{3,4}"
-               title="CVC (3 or 4 Digit Security Code)" value=""
-               autocomplete="off">
-    </p>
-
-    <p>
-        <input type="submit" value="Purchase" class="checkout-btn">
-    </p>
-</form>
-
 </body>
 </html>
