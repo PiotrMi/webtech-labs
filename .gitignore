@@ -1,5 +1,6 @@
 ### Bower ###
 bower_components
+.DS_Store
 
 
 ### SublimeText ###
