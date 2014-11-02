@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 2</title>
-    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./bower_components/mapbox.js/mapbox.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./bower_components/jquery/dist/jquery.js"></script>
@@ -13,13 +12,70 @@
     <script src="./js/app.js"></script>
 </head>
 <body>
-    <div class="map">
-    </div>
-    <div class="loading">
-        <h1 class="loading__text">
-            Loading your location...
-        </h1>
-    </div>
+    <header>
+        <nav class="navbar" >
+            <a class="navbar__brand" href="/">
+                Brand
+            </a>
+            <ul class="navbar__nav navbar__nav_right">
+                <li>
+                    <a href="contacts.html">
+                        contacts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="page__sidebar">
+            <ul class="list">
+                <li class="list__item active">
+                    <a class="list__link" href="#cinema-1">
+                        Cinema 1
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a class="list__link" href="#cinema-2">
+                        Cinema 2
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a class="list__link" href="#cinema-3">
+                        Cinema 3
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a class="list__link" href="#cinema-4">
+                        Cinema 4
+                    </a>
+                </li>
+            </ul>
+            <div class="map">
+            </div>
+        </div>
+        <div class="page__content">
+            <section id="cinema-1">
+                <h1 class="page__title">
+                    Cinema 1
+                </h1>
+            </section>
+            <section id="cinema-2">
+                <h1 class="page__title">
+                    Cinema 2
+                </h1>
+            </section>
+            <section id="cinema-3">
+                <h1 class="page__title">
+                    Cinema 3
+                </h1>
+                <p>
+                    dawjodjwaoidjwa dapwo jdpwjdpo wjapdoj
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer>
+    </footer>
 
 </body>
 </html>
