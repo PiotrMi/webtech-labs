@@ -78,4 +78,5 @@ $(function() {
         $('#'+target).show().animate({opacity: 1});
         return false;
     });
+    $('.list__item.active a').click();
 });
