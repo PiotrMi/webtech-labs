@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Assignment 2</title>
     <link rel="stylesheet" href="./bower_components/mapbox.js/mapbox.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/video.css">
     <link rel="stylesheet" type="text/css" href="css/user_form.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script src="./bower_components/jquery/dist/jquery.js"></script>
     <script src="./bower_components/mapbox.js/mapbox.js"></script>
     <script src="./bower_components/lodash/dist/lodash.js"></script>
     <script src="./js/canvas.js"></script>
+    <script src="./js/video.js"></script>
     <script src="./js/app.js"></script>
 </head>
 <body>
@@ -61,16 +63,31 @@
                 </h1>
                 <div class="row">
                     <img src="img/into_the_storm.jpg" alt="">
-                    <h2> Into the storm</h2>
+                    <h2>Into the storm</h2>
                     <p class="page__text">
                         A group of high school students are in a car together as a storm is brewing. When the storm gets worse, the kids look up ahead and see a tornado approaching. A girl begs for them to go, but the boy recording on a camera gets out to video tape the tornado. He gets back in the car, but the tornado picks them up before they can escape, killing them all.
 
                         In the town of Silverton, Oklahoma, the local high school senior class is preparing for graduation. The high school's vice-principal, Gary Fuller, has asked his two sons, Trey and Donnie, to record messages from the seniors for a time capsule to be opened in 25 years. Elsewhere, Pete, a veteran storm chaser, has been attempting to intercept and film tornadoes using a heavily armored vehicle nicknamed Titus, but has come up short all year long. Upon learning of a major line of developing storms, the chasers confer and decide to head for Silverton in hopes of filming tornadoes. After arriving in Silverton, the team discovers that the cell they had been chasing has dissipated, upsetting Pete. As the team reconvenes to determine its next move, the Silverton cell abruptly strengthens, resulting in a hailstorm and tornado. As the team films, the funnel abruptly shifts course and heads for the high school.
                     </p>
+                    <div style="text-align:center">
+                        <hr>
+                        <h2>Trailer</h2>
+                        <button onclick="playPause()">Play/Pause</button>
+                        <button onclick="makeBig()">Big</button>
+                        <button onclick="makeSmall()">Small</button>
+                        <button onclick="makeNormal()">Normal</button>
+                        <br>
+                        <video id="videoPlayer" width="420" controls="controls">
+                            <source id='mp4Source' src="./video/java.mp4" type="video/mp4">
+                            <source id='oggSource' src="./video/java.ogg" type="video/ogg">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+
                 </div>
                 <div class="row">
                     <hr>
-                    <h2>Buy ticket</h2>
+                    <h2>Buy tickets</h2>
 
                     <canvas id='myCanvas'>Обновите браузер</canvas>
                     <form class="checkout">
