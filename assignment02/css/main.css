@@ -53,6 +53,11 @@ html, body {
     color: #333;
     text-transform: capitalize;
 }
+.navbar__nav li {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 5px 0;
+}
 
 /*   Page   */
 

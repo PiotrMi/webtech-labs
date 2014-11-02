@@ -54,7 +54,7 @@ $(function() {
                 }
             }).addTo(map);
             cinemas.forEach(function() {
-                newPos = [pos[1] + _.random(-10,10)/1000, pos[0] + _.random(-10,10)/1000];
+                newPos = [pos[1] + Math.random()/100, pos[0] + Math.random()/100];
                 crateMarket(map, newPos);
             });
             $('.loading').animate({opacity: 0}, 1000);
