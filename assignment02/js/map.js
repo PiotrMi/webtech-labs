@@ -15,8 +15,7 @@ $(function() {
                 coordinates: pos.reverse()
             },
             properties: {
-                title: 'Peregrine Espresso',
-                description: '1718 14th St NW, Washington, DC',
+                title: 'Cinema',
                 'marker-size': 'large',
                 'marker-color': '#E44532',
                 'marker-symbol': 'cinema'
@@ -26,6 +25,7 @@ $(function() {
 
 
     var $map = $('.map');
+
     if($map.length) {
 
         $body = $('body');
@@ -37,7 +37,6 @@ $(function() {
         showPosition = function(position) {
             pos = [position.coords.latitude, position.coords.longitude];
             map.panTo(pos);
-            //L.marker(pos).addTo(map);
             L.mapbox.featureLayer({
                 type: 'Feature',
                 geometry: {
@@ -45,8 +44,7 @@ $(function() {
                     coordinates: pos.reverse()
                 },
                 properties: {
-                    title: 'Peregrine Espresso',
-                    description: '1718 14th St NW, Washington, DC',
+                    title: 'You are here',
                     'marker-size': 'large',
                     'marker-color': '#3445E2',
                     'marker-symbol': 'star'

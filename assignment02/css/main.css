@@ -69,6 +69,15 @@ html, body {
     width: 75%;
     float: right;
 }
+@media (max-width: 900px) {
+    .page__content {
+        width: 100%;
+    }
+    .page__sidebar {
+        width: 100%;
+    }
+}
+
 .page__title {
     font-size: 2.5em;
     color: #333;
