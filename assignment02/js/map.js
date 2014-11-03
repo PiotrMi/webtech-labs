@@ -1,31 +1,30 @@
-
-var cinemas = [
-    [10,20],
-    [11,21],
-    [14,24],
-    [17,25]
-];
-
-function crateMarket(map, pos) {
-    L.mapbox.featureLayer({
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: pos.reverse()
-        },
-        properties: {
-            title: 'Peregrine Espresso',
-            description: '1718 14th St NW, Washington, DC',
-            'marker-size': 'large',
-            'marker-color': '#E44532',
-            'marker-symbol': 'cinema'
-        }
-    }).addTo(map);
-
-}
-
-
 $(function() {
+
+    var cinemas = [
+        [10,20],
+        [11,21],
+        [14,24],
+        [17,25]
+    ];
+
+    var crateMarket = function(map, pos) {
+        L.mapbox.featureLayer({
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: pos.reverse()
+            },
+            properties: {
+                title: 'Peregrine Espresso',
+                description: '1718 14th St NW, Washington, DC',
+                'marker-size': 'large',
+                'marker-color': '#E44532',
+                'marker-symbol': 'cinema'
+            }
+        }).addTo(map);
+    };
+
+
     var $map = $('.map');
     if($map.length) {
 
@@ -66,17 +65,4 @@ $(function() {
             $body.html("Geolocation is not supported by this browser.");
         }
     }
-});
-
-
-$(function() {
-    $(".list__link").on('click', function(e) {
-        var target = this.href.split('#')[1];
-        $('.list__item').removeClass('active');
-        $(this).closest('.list__item').addClass('active');
-        $('section').animate({opacity: 0}).hide();
-        $('#'+target).show().animate({opacity: 1});
-        return false;
-    });
-    $('.list__item.active a').click();
 });
