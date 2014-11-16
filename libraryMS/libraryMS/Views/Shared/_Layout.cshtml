@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/Content/index.css")"  rel="stylesheet" type="text/css"/>
+        <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script>
+        <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")"></script>
+        <script src="@Url.Content("~/Scripts/libraryMS.js")"></script>
+    </head>
+    <body>
+        <header>
+            <div class="float-left">
+                <p class="site-title">@Html.ActionLink("LibraryMS", "Index", "Home")</p>
+            </div>
+            <div class="login">
+                @Html.Partial("_LoginPartial")     
+            </div>
+        
+        </header>
+        <hr />
+      @RenderBody()
+        <footer>
+                <hr />
+                <div id="status_bar">@ViewBag.Message</div>
+                <div class="inline-class" id="copyright">
+                    <p>&copy; @DateTime.Now.Year - ITJam</p>
+                </div>
+            
+        </footer>
+    </body>
+</html>

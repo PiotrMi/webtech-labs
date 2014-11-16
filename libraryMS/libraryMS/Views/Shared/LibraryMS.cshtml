@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "LibraryMS";
+}
+<div id="main_content">
+    <form method="post">
+        <table id="tool_bar">
+            <tr>
+                <td>
+                    <select class="tool_bar_control">
+                        <option selected value=" "></option>
+                        <option value="AllBook">All Books</option>
+                        <option value="AvailableBook">Available Books</option>
+                        <option value="BorrowedBook">Borrowed Books</option>
+                        <option value="Categogry">Category</option>
+                        <option value="History">History</option>
+                    </select>
+                </td>
+                <td><input class="tool_bar_control" id="add_btn" type="button" value="Add" title="Add a book" /></td>
+                <td><input class="tool_bar_control" id="borrow_btn" type="button" value="Borrow" title="Borrow a book" /></td>
+                <td><input class="tool_bar_control" id="return_btn" type="button" value="Return" title="Return a book" /></td>
+            </tr>
+        </table>
+    </form>
+    <div id="table_container">
+        <table id="content_table">
+
+            <!--  Content of this table depends on the user selection -->
+        </table>
+        <div id="output_pane"></div>
+    </div>
+</div>
+
+
+
+
