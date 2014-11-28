@@ -7,15 +7,16 @@
     $action = $_GET["action"];
     $session = $_GET["session"];
 
-    if($action == "get") {
-        $query = "SELECT * FROM Tickets";
-    } else if ($action == "create") {
-        $query = "INSERT INTO Tickets (`movie`, `session`, `row`, `seat`) VALUES ('Olol', 12, 4, 15);";
-    } else {
-        $query = "SELECT * FROM Tickets";
-    }
+    $query = "SELECT * FROM Tickets";
 
-    echo $query;
+    if($action == "create") {
+        $values = join(",", array(
+            "'". $_POST["movie"] ."'",
+            $_POST["session"],
+            $_POST["row"],
+            $_POST["seat"]));
+        $query = "INSERT INTO Tickets (`movie`, `session`, `row`, `seat`) VALUES (". $values .");";
+    }
 
     $data = mysql_query($query);
 

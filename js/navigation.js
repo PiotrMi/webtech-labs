@@ -8,4 +8,18 @@ $(function() {
         return false;
     });
     $('.list__item.active a').click();
+
+    $(':submit').on("click", function(e) {
+        $.post("/tickets/index.php?action=create", {
+            movie: "Ninja",
+            session: 1,
+            row: 13,
+            seat: 4
+        });
+        return false;
+    });
+
+    $.get("/tickets", {}, function(data) {
+        console.log(data);
+    }, "json");
 });
