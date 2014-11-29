@@ -257,3 +257,5 @@ FakesAssemblies/
 ### NotepadPP ###
 # Notepad++ backups #
 *.bak
+
+/vendor/

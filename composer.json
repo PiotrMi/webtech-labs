@@ -1,0 +1,13 @@
+{
+    "name": "petr/webtech",
+    "description": "lab cinema project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petr tarasenko",
+            "email": "Pereter92@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
