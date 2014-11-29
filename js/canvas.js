@@ -3,7 +3,7 @@ $(function () {
     var canvases = $('canvas');
 
     canvases.each(function(key, value){
-        renderCanvas(value);    
+        renderCanvas(value);
     });
 
     function renderCanvas(canvas) {
@@ -28,7 +28,7 @@ $(function () {
 
         function renderSits(canvas, mouseX, mouseY, eventType){
             ctx = canvas.getContext('2d');
-            
+
             ctx.strokeStyle = 'gray';
 
             priceHolder = document.getElementById('price');
@@ -41,9 +41,9 @@ $(function () {
                     else
                         ctx.fillStyle = '#'+j+'9'+9+j+'AA';
 
-                    if ((mouseX > (sit.startX + i * sit.distance)) && 
-                        (mouseX < (sit.startX + i * sit.distance + sit.size)) && 
-                        (mouseY > (sit.startY + j * sit.distance)) && 
+                    if ((mouseX > (sit.startX + i * sit.distance)) &&
+                        (mouseX < (sit.startX + i * sit.distance + sit.size)) &&
+                        (mouseY > (sit.startY + j * sit.distance)) &&
                         (mouseY < (sit.startY + j * sit.distance + sit.size))){
 
                         if (eventType == "mousedown"){
@@ -72,21 +72,21 @@ $(function () {
 
         canvas.addEventListener('mousemove', function(evt) {
             var mousePos = getMousePos(canvas, evt);
-            renderSits(canvas, mousePos.x, mousePos.y, evt.type);        
+            renderSits(canvas, mousePos.x, mousePos.y, evt.type);
         }, false);
 
         canvas.addEventListener("mousedown", function(evt){
             var mousePos = getMousePos(canvas, evt);
-            renderSits(canvas, mousePos.x, mousePos.y, evt.type);        
+            renderSits(canvas, mousePos.x, mousePos.y, evt.type);
         }, false);
 
 
-        renderSits(canvas, 0, 0);        
+        renderSits(canvas, 0, 0);
 
         //screen
         ctx.beginPath();
         ctx.moveTo(50,20);
-        ctx.quadraticCurveTo(180,5,320,20);    
+        ctx.quadraticCurveTo(180,5,320,20);
         ctx.lineWidth = 4;
         ctx.strokeStyle = '#1943BF';
         ctx.stroke();

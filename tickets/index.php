@@ -7,7 +7,15 @@
     $action = $_GET["action"];
     $session = $_GET["session"];
 
-    $query = "SELECT * FROM Tickets";
+
+
+    if(isset($session)){
+        $query = "SELECT * FROM Tickets WHERE session=".(string)$session;
+    }
+    else{
+        $query = "SELECT * FROM Tickets";
+    }
+
 
     if($action == "create") {
         $values = join(",", array(
